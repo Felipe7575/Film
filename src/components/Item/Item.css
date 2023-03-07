@@ -1,0 +1,37 @@
+.item-pelicula{
+    width: 22%;
+    aspect-ratio: 2/3;
+    background-color: #000000;
+    padding: auto;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+    padding: 2%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.imagenList{
+    width: 100%;
+
+    
+}
+/* This code let de item film increase dimensions without moving the others */
+ .item-pelicula:hover{
+    position: relative;
+    transform: scale(1.08,1.08);
+    background-color: #e9dcdc;
+    color: #070707;
+    transition: .6s;
+    
+} 
+
+.titulo{
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
