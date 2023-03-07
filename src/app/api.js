@@ -1,5 +1,5 @@
 
-const  solicitarPeliculas = (Modo) => {
+export const  solicitarPeliculas = (Modo) => {
     switch (Modo) {
         case 0:
             console.log(0);
@@ -20,4 +20,8 @@ const  solicitarPeliculas = (Modo) => {
     }
 }
 
-export default solicitarPeliculas;
+
+export const solicitarPeliculasId = (id) => {
+    return (fetch('https://api.themoviedb.org/3/movie/631842?api_key=4dc8443801938005a237c26a3db16dca&language=en-US')
+                .then(response => response.json()))
+}

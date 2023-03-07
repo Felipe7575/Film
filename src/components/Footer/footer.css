@@ -1,12 +1,9 @@
-.footer-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
+
+.footer-container {
+    background: #111;
     color: #fff;
-    padding: 0 20px;
-    height: 7%;
     width: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
+    text-align: center;
+    padding: 1em;
+    align-self: flex-end;
+  }

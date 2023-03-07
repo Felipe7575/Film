@@ -1,0 +1,68 @@
+
+.contenedor{
+    height: 82vh;
+    background: rgb(208,206,240);
+background: linear-gradient(90deg, rgba(208,206,240,0.12648809523809523) 0%, rgba(210,210,210,0.1516981792717087) 88%, rgba(0,0,0,0.022846638655462215) 100%);
+}
+
+.contenedor-film-details{
+    display: flex;
+    flex-direction: row; 
+    height: 60vh;
+    justify-content: center;
+    padding: 80px 0px 0px 0px;
+    
+}
+.imagenDetail{
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.contenedor-film-details-info{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 50vw;
+    height: 100%;
+    text-align: left;
+    padding-left: 5%;
+    
+    
+}
+.overviewDiv{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+    
+}
+.categorias-detail{
+    width: 100%;
+    font-size: 1.5rem;
+}
+.filmTitle-detail{
+    width: 100%;
+    height: fit-content;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 0px;
+}
+.filmOverview-detail{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 450;
+    color: #292828;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+

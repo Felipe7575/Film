@@ -8,7 +8,7 @@ import ListContainer from "../../components/listContainer/ListContainer";
 const Home = () => {
     return (
         <div>
-            <ListContainer/>
+           
         </div>
 
     )

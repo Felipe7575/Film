@@ -1,55 +1,52 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import './navBar.css'
-
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { useRef } from 'react';
+import {useNavigate} from 'react-router-dom';
 
 const NavBar = () => {
-    return (
-        <Navbar  expand="lg">
-            <Container fluid className="navBar-container">
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-                <Nav
-                className="me-auto my-2 my-lg-0"
-                style={{ maxHeight: '100px' }}
-                navbarScroll
-                >
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
-                <NavDropdown title="Link" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                    Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                    Something else here
-                    </NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="#" disabled>
-                    Link
-                </Nav.Link>
-                </Nav>
-                <Form className="d-flex">
-                <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-                </Form>
-            </Navbar.Collapse>
-            </Container>
-        </Navbar>
+    const [isNavExpanded, setIsNavExpanded] = useState(false)
+    const windowSize = useRef([window.innerWidth, window.innerHeight]);
+
+    const navigate = useNavigate();
+    const click= (dir) => {navigate(dir);}
   
+
+
+    useEffect(() => {
+
+    if(windowSize.current[0] > 1100)
+        setIsNavExpanded(true);
+
+    }, [])
+    const changeNavExpanded = () => {   
+        setIsNavExpanded(!isNavExpanded);
+    }
+    return (
+        <div className="navBar colapsible">
+            <div className="navbar-Filmorama">
+                <h1>Filmorama</h1>
+                <i class="fa-solid fa-bars burguer" onClick={changeNavExpanded}></i>
+            </div>
+            {isNavExpanded && 
+            <div>
+                <div className="linkSearch colapsada">
+                    <div className="linksPaginas">
+                        <button className="" onClick={()=>click("/listContainer/0")}>INICO</button>
+                        <button className="" onClick={()=>click("/listContainer/2")}>TOP</button>
+                        <button className="" onClick={()=>click("/listContainer/1")}>ESTRENOS</button>
+                        <button className="" onClick={()=>click("/listContainer/3")}>UP COMING</button>
+                    </div>
+                    <div className="navbar-Search">
+                        <input type="text" placeholder="Buscar" className="navbar-Search-input"/>
+                        <i class="fa-solid fa-magnifying-glass iconoBusqueda"></i>
+                    </div>
+                </div>
+            </div>
+            }
+        
+
+        </div>
     );
 }
 export default NavBar;
