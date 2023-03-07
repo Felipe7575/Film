@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from '../pages/home/Home';
 import Layout from '../app/Layout';
+import ListContainer from '../components/listContainer/ListContainer';
 
 const Router = () => {
     
@@ -9,7 +10,7 @@ const Router = () => {
     <BrowserRouter>
         <Routes>
             <Route element={<Layout/>}>
-                <Route index element={<Home/>}/>
+                <Route index path="/listContainer/:catId" element={<ListContainer/>}/>
            
                 <Route path="*" element={<div>404</div> } />
             </Route>

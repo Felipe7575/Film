@@ -4,8 +4,8 @@ import  solicitarPeliculas  from '../../app/api';
 import ListContainer from "../../components/listContainer/ListContainer";
 
 
+
 const Home = () => {
-    
     return (
         <div>
             <ListContainer/>

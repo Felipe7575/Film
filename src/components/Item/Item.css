@@ -1,6 +1,7 @@
 .item-pelicula{
-    width: 22%;
-    aspect-ratio: 2/3;
+    width: 15%;
+    aspect-ratio: 3/5;
+
     background-color: #000000;
     padding: auto;
     color: #ffffff;
@@ -8,13 +9,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 1%;
-    padding: 2%;
+    margin: 0.5rem;
+    padding: 1%;
     overflow: hidden;
     border-radius: 10px;
 }
 .imagenList{
     width: 100%;
+    aspect-ratio: 2/3;
 
     
 }
@@ -22,16 +24,33 @@
  .item-pelicula:hover{
     position: relative;
     transform: scale(1.08,1.08);
-    background-color: #e9dcdc;
+    background-color: #e9dcdc5b;
     color: #070707;
     transition: .6s;
     
 } 
 
-.titulo{
+.titleList{
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
+    
+}
+@media screen and (max-width: 1300px) {
+    .item-pelicula{
+        width: 23%;
+    }
+    .titleList{   
+        font-size: 1rem;   
+    }
+}
+@media screen and (max-width: 900px) {
+    .item-pelicula{
+        width: 30%;
+    }
+    .titleList{
+        font-size: 1rem;       
+    }
 }
