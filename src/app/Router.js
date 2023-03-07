@@ -11,8 +11,9 @@ const Router = () => {
     <BrowserRouter>
         <Routes>
             <Route element={<Layout/>}>
-                <Route index path="/listContainer/:catId" element={<ListContainer/>}/>
-                <Route index path="/filmDetail/:filmId" element={<FilmDetail/>}/>
+                <Route  path="/listContainer/0" element={<ListContainer/>}/>
+                <Route  path="/listContainer/:catId" element={<ListContainer/>}/>
+                <Route  path="/filmDetail/:filmId" element={<FilmDetail/>}/>
                 <Route path="*" element={<div>404</div> } />
             </Route>
         </Routes>
