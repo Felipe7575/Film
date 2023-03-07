@@ -2,7 +2,7 @@
 .contenedor{
     height: 82vh;
     background: rgb(208,206,240);
-background: linear-gradient(90deg, rgba(208,206,240,0.12648809523809523) 0%, rgba(210,210,210,0.1516981792717087) 88%, rgba(0,0,0,0.022846638655462215) 100%);
+    background: linear-gradient(90deg, rgba(208,206,240,0.12648809523809523) 0%, rgba(210,210,210,0.1516981792717087) 88%, rgba(0,0,0,0.022846638655462215) 100%);
 }
 
 .contenedor-film-details{

@@ -24,7 +24,7 @@ const NavBar = () => {
     }
     return (
         <div className="navBar colapsible">
-            <div className="navbar-Filmorama">
+            <div className="navbar-Filmorama" onClick={()=>click("/listContainer/0")}>
                 <h1>Filmorama</h1>
                 <i class="fa-solid fa-bars burguer" onClick={changeNavExpanded}></i>
             </div>
