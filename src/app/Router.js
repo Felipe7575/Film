@@ -11,7 +11,7 @@ const Router = () => {
     <BrowserRouter>
         <Routes>
             <Route element={<Layout/>}>
-                <Route  path="/listContainer/0" element={<ListContainer/>}/>
+                <Route  path="" element={<ListContainer/>}/>
                 <Route  path="/listContainer/:catId" element={<ListContainer/>}/>
                 <Route  path="/filmDetail/:filmId" element={<FilmDetail/>}/>
                 <Route path="*" element={<div>404</div> } />

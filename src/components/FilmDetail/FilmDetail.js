@@ -4,6 +4,10 @@ import {useParams} from 'react-router-dom';
 import { solicitarPeliculasId } from "../../app/api";
 import './FilmDetail.css';
 
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+
+
 
 
 const FilmDetail = () => {
@@ -13,8 +17,8 @@ const FilmDetail = () => {
     const pathImagenes = "https://image.tmdb.org/t/p/w500";
 
     useEffect(() => {
-        console.log(filmId);
-        solicitarPeliculasId(631842).then(data =>{ setPeliculas(data); console.log(data);});
+        
+        solicitarPeliculasId(filmId).then(data =>{ setPeliculas(data); console.log(data);});
     },[filmId]);
 
     return (
@@ -28,6 +32,8 @@ const FilmDetail = () => {
                     <div className="overviewDiv">
                         <h2 className="categorias-detail">overview</h2>
                         <h3 className="filmOverview-detail">{peliculas.overview}</h3>
+                        <Typography component="legend">Read only</Typography>
+                        <Rating name="half-rating"value={peliculas.vote_average / 2} precision={0.5}  readOnly />
                     </div>
                     
                 </div>

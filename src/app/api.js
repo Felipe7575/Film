@@ -22,6 +22,6 @@ export const  solicitarPeliculas = (Modo) => {
 
 
 export const solicitarPeliculasId = (id) => {
-    return (fetch('https://api.themoviedb.org/3/movie/631842?api_key=4dc8443801938005a237c26a3db16dca&language=en-US')
+    return (fetch('https://api.themoviedb.org/3/movie/'+id+'?api_key=4dc8443801938005a237c26a3db16dca&language=en-US')
                 .then(response => response.json()))
 }
