@@ -8,6 +8,11 @@ const NavBar = () => {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
+    const [name, setName] = useState("Your name here!");
+    const handleChange = event => {
+      setName(event.target.value)
+    }
+
     const navigate = useNavigate();
     const click= (dir) => {navigate(dir);}
   
@@ -38,8 +43,8 @@ const NavBar = () => {
                         <button className="" onClick={()=>click("/listContainer/3")}>UP COMING</button>
                     </div>
                     <div className="navbar-Search">
-                        <input type="text" placeholder="Buscar" className="navbar-Search-input"/>
-                        <i class="fa-solid fa-magnifying-glass iconoBusqueda"></i>
+                        <input type="text" placeholder="Buscar" className="navbar-Search-input"   onChange={handleChange} />
+                        <i class="fa-solid fa-magnifying-glass iconoBusqueda" onClick={()=>click("/filmTitle/"+name)} ></i>
                     </div>
                 </div>
             </div>

@@ -5,18 +5,26 @@ import Item from "../Item/Item";
 import './listContainer.css';
 
 
-import  {solicitarPeliculas}  from '../../app/api';
+
+import  {solicitarPeliculas,solicitarPeliculasBusqueda}  from '../../app/api';
 
 const ListContainer = () => {
     const [peliculas, setPeliculas] = useState([]);
     const {catId=0} = useParams();
+    const {filmTitle=""} = useParams();
     const pathImagenes = "https://image.tmdb.org/t/p/w500"
 
     useEffect(() => {
-            const cat = parseInt(catId);
-            solicitarPeliculas(cat).then(data =>{ setPeliculas(data);});    
+        setPeliculas([]);
+            console.log("CatId "+catId + " FilmTitle " + filmTitle);
+            if (catId != null){
+                const cat = parseInt(catId);
+                solicitarPeliculas(cat).then(data =>{setPeliculas([]); setPeliculas(data);});  
+            }
+            if(filmTitle != "")
+                solicitarPeliculasBusqueda(filmTitle).then(data =>{setPeliculas([]); setPeliculas(data);});  
             
-    },[catId]);
+    },[catId, filmTitle]);
 
 
    

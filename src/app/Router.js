@@ -13,6 +13,7 @@ const Router = () => {
             <Route element={<Layout/>}>
                 <Route  path="" element={<ListContainer/>}/>
                 <Route  path="/listContainer/:catId" element={<ListContainer/>}/>
+                <Route  path="/filmTitle/:filmTitle" element={<ListContainer/>}/>
                 <Route  path="/filmDetail/:filmId" element={<FilmDetail/>}/>
                 <Route path="*" element={<div>404</div> } />
             </Route>

@@ -25,3 +25,8 @@ export const solicitarPeliculasId = (id) => {
     return (fetch('https://api.themoviedb.org/3/movie/'+id+'?api_key=4dc8443801938005a237c26a3db16dca&language=en-US')
                 .then(response => response.json()))
 }
+
+export const solicitarPeliculasBusqueda = (busqueda) => {
+    return(fetch('https://api.themoviedb.org/3/search/movie?api_key=4dc8443801938005a237c26a3db16dca&language=en-US&query='+busqueda+'&page=1')
+                .then(response => response.json()))
+}
